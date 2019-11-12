@@ -1,0 +1,28 @@
+<ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/process/list">Processes</a></li>
+        <li class="breadcrumb-item active">Edit</a></li>
+    </ol>
+    <h1 class="display-4">Edit Process</h1>
+    <form method="POST" action="/process/update/<%= process.id %>">
+        <div class="form-group">
+            <label for="body">Name</label>
+            <input type="text" name="name" class = "form-control" value = "<%= process.name %>">
+        </div>
+    
+        <div class="form-group">
+            <label for="body">Short Name</label>
+            <input type="text" name="shortName" class = "form-control" value = "<%= process.shortName %>">
+        </div>
+        
+        <div class="form-group">
+            <label for="body">Description</label>
+            <input type="text" name="description" class = "form-control" value = "<%= process.description %>">
+        </div>
+    
+        <div class="form-group">
+            <label for="body">Materials</label>
+            <input type="text" name="materials" class = "form-control" value = "<%= process.materials %>">
+        </div>
+    
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </form>

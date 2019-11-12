@@ -1,0 +1,32 @@
+<h1 class="disiplay-4">Processes</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Short Name</th>
+            <th>Description</th>
+            <th>Materials</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% processes.forEach(function(process){ %>
+            <tr>
+                <td><%= process.id %></td>
+                <td><%= process.name %></td>
+                <td><%= process.shortName %></td>
+                <td><%= process.description %></td>
+                <td><%= process.materials %></td>
+                <td>
+                    <a href="/process/edit/<%= process.id %>">
+                        <input type="submit" value="Edit" class="btn btn-primary">
+                    </a>
+                    <a href="/process/destroy/<%= process.id %>">
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                    </a>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

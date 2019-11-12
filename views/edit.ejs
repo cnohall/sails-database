@@ -1,0 +1,28 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/vendors/list">Vendors</a></li>
+    <li class="breadcrumb-item active">Edit</a></li>
+</ol>
+<h1 class="display-4">Edit Vendor</h1>
+<form method="POST" action="/vendors/update/<%= vendor.id %>">
+    <div class="form-group">
+        <label for="body">Name</label>
+        <input type="text" name="name" class = "form-control" value = "<%= vendor.name %>">
+    </div>
+
+    <div class="form-group">
+        <label for="body">Owner</label>
+        <input type="text" name="owner" class = "form-control" value = "<%= vendor.owner %>">
+    </div>
+    
+    <div class="form-group">
+        <label for="body">Companies</label>
+        <input type="text" name="companies" class = "form-control" value = "<%= vendor.companies %>">
+    </div>
+
+    <div class="form-group">
+        <label for="body">Shops</label>
+        <input type="text" name="shops" class = "form-control" value = "<%= vendor.shops %>">
+    </div>
+
+    <input type="submit" value="Submit" class="btn btn-primary">
+</form>

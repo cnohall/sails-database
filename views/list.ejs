@@ -1,0 +1,32 @@
+<h1 class="disiplay-4">Vendors</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Owner</th>
+            <th>Companies</th>
+            <th>Shops</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% vendors.forEach(function(vendor){ %>
+            <tr>
+                <td><%= vendor.id %></td>
+                <td><%= vendor.name %></td>
+                <td><%= vendor.owner %></td>
+                <td><%= vendor.companies %></td>
+                <td><%= vendor.shops %></td>
+                <td>
+                    <a href="/vendors/edit/<%= vendor.id %>">
+                        <input type="submit" value="Edit" class="btn btn-primary">
+                    </a>
+                    <a href="/vendors/destroy/<%= vendor.id %>">
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                    </a>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
