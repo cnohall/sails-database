@@ -1,2 +1,2 @@
-# sails-database
-database written in sails.js
+# Sails database
+Database written in sails.js
